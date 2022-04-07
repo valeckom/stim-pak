@@ -1,12 +1,6 @@
 import {Component} from '@angular/core';
 import {ViewWillEnter} from '@ionic/angular';
 import {CameraPreview} from '@awesome-cordova-plugins/camera-preview/ngx';
-import {
-  AndroidFullScreen,
-} from '@awesome-cordova-plugins/android-full-screen/ngx';
-import {
-  ScreenOrientation,
-} from '@awesome-cordova-plugins/screen-orientation/ngx';
 
 @Component({
   selector: 'app-mirror',
@@ -16,14 +10,10 @@ import {
 export class MirrorPage implements ViewWillEnter {
   constructor(
     private cameraPreview: CameraPreview,
-    private androidFullscreen: AndroidFullScreen,
-    private screenOrientation: ScreenOrientation,
   ) {
   }
 
   async ionViewWillEnter() {
-    await this.screenOrientation.lock('portrait');
-
     const options = {
       x: 0,
       y: 0,
@@ -37,10 +27,6 @@ export class MirrorPage implements ViewWillEnter {
       storeToFile: false,
       disableExifHeaderStripping: false,
     };
-
-    if (await this.androidFullscreen.isImmersiveModeSupported()) {
-      await this.androidFullscreen.immersiveMode();
-    }
 
     await this.cameraPreview.startCamera(options);
   }

@@ -9,13 +9,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'mirror',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
     path: 'mirror',
     loadChildren: () => import('./mirror/mirror.module').then(
       m => m.MirrorPageModule),
+  },
+  {
+    path: 'tappy',
+    loadChildren: () => import('./tappy/tappy.module').then(
+      m => m.TappyPageModule),
   },
 ];
 
