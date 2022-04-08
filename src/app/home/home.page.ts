@@ -21,7 +21,15 @@ export class HomePage implements ViewWillEnter {
   }
 
   async ionViewWillEnter() {
-    await this.screenOrientation.lock('portrait');
+    try {
+      await this.screenOrientation.lock('portrait');
+    } catch (e) {
+      if (e.name === 'NotSupportedError') {
+        console.log('screenOrientation is not supported');
+      } else {
+        console.error(e);
+      }
+    }
 
     if (await this.androidFullscreen.isImmersiveModeSupported()) {
       await this.androidFullscreen.immersiveMode();
