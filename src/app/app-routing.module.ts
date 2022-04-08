@@ -22,6 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./tappy/tappy.module').then(
       m => m.TappyPageModule),
   },
+  {
+    path: 'face-time',
+    loadChildren: () => import('./face-time/face-time.module').then(
+      m => m.FaceTimePageModule),
+  },
 ];
 
 @NgModule({

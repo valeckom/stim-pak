@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./tappy.page.scss'],
 })
 export class TappyPage implements OnInit {
-  backgroundColor;
-  colors = [
+  backgroundColor: string;
+  colors: string[] = [
     '#FF6565',
     '#FFB265',
     '#FFFF65',
