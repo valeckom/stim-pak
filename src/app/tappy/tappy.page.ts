@@ -12,13 +12,10 @@ export class TappyPage implements OnInit {
     '#FFB265',
     '#FFFF65',
     '#65FF65',
-    '#65FFB2',
     '#65FFFF',
     '#65B2FF',
-    '#6565FF',
     '#B265FF',
     '#FF65FF',
-    '#FF65B2',
   ];
   colorI = 0;
 
