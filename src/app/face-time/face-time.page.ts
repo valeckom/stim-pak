@@ -8,20 +8,32 @@ import {Component, OnInit} from '@angular/core';
 export class FaceTimePage implements OnInit {
   imgUrl: string;
   imgsSrc: string[] = [
-    'PXL_20211115_021241762~2.png',
-    'PXL_20210903_203352704_2.jpg',
-    'PXL_20211106_012300792.png',
-    'sdfghsdfh.png',
-    'untitled-4.png',
-    'PXL_20210914_171707847.jpg',
-    'PXL_20210929_210025560.png',
-    'PXL_20210816_001101757.jpg',
-    'PXL_20220131_022450844.png',
-    '20131107_194221.jpg',
-    'hailey-9mo-52.png',
-    'PXL_20210705_224256611.jpg',
-    'PXL_20210815_235439281.PORTRAIT.jpg',
-    'PXL_20220215_193649852.png',
+    'stock-1.jpg',
+    'stock-2.jpg',
+    'stock-3.jpg',
+    'stock-4.jpg',
+    'stock-5.jpg',
+    'stock-6.jpg',
+    'stock-7.jpg',
+    'stock-8.jpg',
+    'stock-9.jpg',
+    'stock-10.jpg',
+    'stock-11.jpg',
+    'stock-12.jpg',
+    'stock-13.jpg',
+    'stock-14.jpg',
+    'stock-15.jpg',
+    'stock-16.jpg',
+    'stock-17.jpg',
+    'stock-18.jpg',
+    'stock-19.jpg',
+    'stock-20.jpg',
+    'stock-21.jpg',
+    'stock-22.jpg',
+    'stock-23.jpg',
+    'stock-24.jpg',
+    'stock-25.jpg',
+    'stock-26.jpg',
   ];
   currentImg: string;
   imgsRandom: string[];
@@ -42,7 +54,7 @@ export class FaceTimePage implements OnInit {
 
     this.currentImg = this.imgsRandom.pop();
 
-    this.imgUrl = `./assets/imgs/${this.currentImg}`;
+    this.imgUrl = `./assets/imgs/face-time/${this.currentImg}`;
   }
 
   getRandomImgOrder(): string[] {
